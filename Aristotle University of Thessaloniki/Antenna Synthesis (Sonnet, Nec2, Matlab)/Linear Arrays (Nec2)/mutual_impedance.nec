@@ -1,0 +1,13 @@
+CM 
+CE
+SY wavelength = 0.1
+SY k=0.05
+SY distance = k* wavelength
+GW	1	11	0	0	0	0	0	0.1	0.001000
+GW	2	11	distance	0	0	distance	0	0.1	0.001000
+GE	0
+GN	-1
+EK
+EX	0	1	6	0	-1	1.22e-16	0
+FR	0	0	0	0	3000	0
+EN
