@@ -1,0 +1,14 @@
+.ALIASES
+V_V2            V2(+=VCC -=0 ) CN @ERG1.SCHEMATIC1(sch_1):INS2193@SOURCE.VDC.Normal(chips)
+R_R2            R2(1=0 2=N02097 ) CN @ERG1.SCHEMATIC1(sch_1):INS2023@ANALOG.R.Normal(chips)
+C_C1            C1(1=N02089 2=N02097 ) CN @ERG1.SCHEMATIC1(sch_1):INS1959@ANALOG.C.Normal(chips)
+R_RL            RL(1=0 2=N02149 ) CN @ERG1.SCHEMATIC1(sch_1):INS2071@ANALOG.R.Normal(chips)
+R_Rc            Rc(1=N02117 2=VCC ) CN @ERG1.SCHEMATIC1(sch_1):INS2039@ANALOG.R.Normal(chips)
+C_Ce            Ce(1=0 2=N02129 ) CN @ERG1.SCHEMATIC1(sch_1):INS1991@ANALOG.C.Normal(chips)
+R_Re            Re(1=0 2=N02129 ) CN @ERG1.SCHEMATIC1(sch_1):INS2055@ANALOG.R.Normal(chips)
+R_R1            R1(1=N02097 2=VCC ) CN @ERG1.SCHEMATIC1(sch_1):INS2007@ANALOG.R.Normal(chips)
+C_C2            C2(1=N02149 2=N02117 ) CN @ERG1.SCHEMATIC1(sch_1):INS1975@ANALOG.C.Normal(chips)
+V_V3            V3(+=N02089 -=0 ) CN @ERG1.SCHEMATIC1(sch_1):INS3464@SOURCE.VAC.Normal(chips)
+Q_Q1            Q1(c=N02117 b=N02097 e=N02129 ) CN @ERG1.SCHEMATIC1(sch_1):INS3703@EVAL.Q2N2222.Normal(chips)
+_    _(VCC=VCC)
+.ENDALIASES

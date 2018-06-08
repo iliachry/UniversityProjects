@@ -1,0 +1,13 @@
+.ALIASES
+R_R1            R1(1=0 2=N04444 ) CN @ERG.SCHEMATIC1(sch_1):INS4450@ANALOG.R.Normal(chips)
+C_Cs            Cs(1=0 2=N04310 ) CN @ERG.SCHEMATIC1(sch_1):INS4206@ANALOG.C.Normal(chips)
+R_RS            RS(1=0 2=N04310 ) CN @ERG.SCHEMATIC1(sch_1):INS4254@ANALOG.R.Normal(chips)
+R_RD            RD(1=N042481 2=VCC ) CN @ERG.SCHEMATIC1(sch_1):INS4238@ANALOG.R.Normal(chips)
+C_C1            C1(1=N04272 2=N04280 ) CN @ERG.SCHEMATIC1(sch_1):INS4190@ANALOG.C.Normal(chips)
+J_J1            J1(d=N042481 g=N04280 s=N04310 ) CN @ERG.SCHEMATIC1(sch_1):INS4286@EVAL.J2N4393.Normal(chips)
+V_Vin           Vin(+=N04272 -=0 ) CN @ERG.SCHEMATIC1(sch_1):INS4164@SOURCE.VSIN.Normal(chips)
+R_RG            RG(1=0 2=N04280 ) CN @ERG.SCHEMATIC1(sch_1):INS4222@ANALOG.R.Normal(chips)
+V_V1            V1(+=VCC -=0 ) CN @ERG.SCHEMATIC1(sch_1):INS4388@SOURCE.VDC.Normal(chips)
+C_C2            C2(1=N04322 2=N04444 ) CN @ERG.SCHEMATIC1(sch_1):INS4422@ANALOG.C.Normal(chips)
+_    _(VCC=VCC)
+.ENDALIASES

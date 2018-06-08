@@ -1,0 +1,90 @@
+
+**** 01/09/14 21:27:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-xar"  [ C:\Users\Ilias\Desktop\spice\teleutaia-PSpiceFiles\SCHEMATIC1\xar.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "xar.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 10 1 
++ V_V2 LIST 0 0.2 0.4 0.6 0.8 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TELEUTAIA
+J_J1         N00095 N00087 0 J2N4393 
+V_V1         N00095 0 0Vdc
+V_V2         0 N00087 0Vdc
+
+**** RESUMING xar.cir ****
+.END
+
+**** 01/09/14 21:27:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-xar"  [ C:\Users\Ilias\Desktop\spice\teleutaia-PSpiceFiles\SCHEMATIC1\xar.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N4393         
+               NJF             
+         VTO   -1.422        
+        BETA    9.109000E-03 
+      LAMBDA    6.000000E-03 
+          IS  205.200000E-15 
+         ISR    1.988000E-12 
+       ALPHA   20.980000E-06 
+          VK  123.7          
+          RD    1            
+          RS    1            
+         CGD    4.570000E-12 
+         CGS    4.060000E-12 
+           M     .4069       
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF  123.000000E-18 
+
+
+
+          JOB CONCLUDED
+
+**** 01/09/14 21:27:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-xar"  [ C:\Users\Ilias\Desktop\spice\teleutaia-PSpiceFiles\SCHEMATIC1\xar.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

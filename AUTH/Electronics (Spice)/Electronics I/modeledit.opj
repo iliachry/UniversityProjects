@@ -1,0 +1,58 @@
+(ExpressProject "modeledit"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\modeledit.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "C:\OrCAD\OrCAD_16.6_Lite\tools\pspice\library\elias.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "C:\OrCAD\OrCAD_16.6_Lite\tools\pspice\library\elias.lib"))
+      (File "..\modeledit.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\modeledit.lib"))
+      (File ".\modeledit-pspicefiles\modeledit.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\modeledit-pspicefiles\modeledit.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (QbreakN
+      (FullPartName "QbreakN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 219"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 997 100 357")
+        (Scroll "0 70")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\ILIAS\DESKTOP\SPICE\MODELEDIT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "Ilias")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_16.6_Lite\tools\capture\library\pspice"))

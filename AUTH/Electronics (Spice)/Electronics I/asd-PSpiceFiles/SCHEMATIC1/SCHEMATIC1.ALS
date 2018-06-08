@@ -1,0 +1,13 @@
+.ALIASES
+R_RD            RD(1=N033891 2=VCC ) CN @ASD.SCHEMATIC1(sch_1):INS3379@ANALOG.R.Normal(chips)
+V_V1            V1(+=VCC -=0 ) CN @ASD.SCHEMATIC1(sch_1):INS3569@SOURCE.VDC.Normal(chips)
+C_Cs            Cs(1=0 2=N03467 ) CN @ASD.SCHEMATIC1(sch_1):INS3347@ANALOG.C.Normal(chips)
+J_J1            J1(d=N033891 g=N03437 s=N03467 ) CN @ASD.SCHEMATIC1(sch_1):INS3443@EVAL.J2N4393.Normal(chips)
+V_Vin           Vin(+=N03429 -=0 ) CN @ASD.SCHEMATIC1(sch_1):INS3305@SOURCE.VSIN.Normal(chips)
+R_RG            RG(1=0 2=N03437 ) CN @ASD.SCHEMATIC1(sch_1):INS3363@ANALOG.R.Normal(chips)
+R_RS            RS(1=0 2=N03467 ) CN @ASD.SCHEMATIC1(sch_1):INS3395@ANALOG.R.Normal(chips)
+C_C1            C1(1=N03429 2=N03437 ) CN @ASD.SCHEMATIC1(sch_1):INS3331@ANALOG.C.Normal(chips)
+C_C2            C2(1=N03479 2=N03724 ) CN @ASD.SCHEMATIC1(sch_1):INS3669@ANALOG.C.Normal(chips)
+R_R1            R1(1=0 2=N03724 ) CN @ASD.SCHEMATIC1(sch_1):INS3703@ANALOG.R.Normal(chips)
+_    _(VCC=VCC)
+.ENDALIASES

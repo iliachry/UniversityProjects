@@ -1,0 +1,55 @@
+
+**** 01/07/14 18:50:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-tasi"  [ C:\Users\Ilias\Desktop\spice\erg1-pspicefiles\schematic1\tasi.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tasi.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/pspice/library/elias.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.002 0 
+.STEP RES R(r) LIST 120k 130k 140k 150k 160k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERG1
+V_V2         VCC 0 15Vdc
+R_R2         0 N02097  33k TC=0,0 
+C_C1         N02089 N02097  10u  TC=0,0 
+R_RL         0 N02149  10k TC=0,0 
+R_Rc         N02117 VCC  4.7k TC=0,0 
+C_Ce         0 N02129  100u  TC=0,0 
+R_Re         0 N02129  1.5k TC=0,0 
+V_V1         N02089 0  
++SIN 0 10m 1k 0 0 0
+R_R1         N02097 VCC  {r} TC=0,0 
+C_C2         N02149 N02117  10u  TC=0,0 
+Q_Q1         N02117 N02097 N02129 QbreakN 
+.PARAM  r=1k
+
+**** RESUMING tasi.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): STEP device R is undefined
+

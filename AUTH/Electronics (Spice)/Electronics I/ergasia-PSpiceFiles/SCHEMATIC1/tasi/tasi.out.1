@@ -1,0 +1,51 @@
+
+**** 01/07/14 16:05:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-tasi"  [ C:\Users\Ilias\Desktop\spice\ergasia-PSpiceFiles\SCHEMATIC1\tasi.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tasi.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.002 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERGASIA
+V_V1         N00762 0  
++SIN 0 10m 1k 0 0 0
+C_C1         N00762 N00769  10u  TC=0,0 
+C_C2         N00823 N00788  10u  TC=0,0 
+C_Ce         0 N00800  100u  TC=0,0 
+R_R1         N00769 VCC  141 TC=0,0 
+R_R2         0 N00769  33k TC=0,0 
+R_Rc         N00788 VCC  4.7k TC=0,0 
+R_Re         0 N00800  1.5k TC=0,0 
+R_RL         0 N00823  10k TC=0,0 
+Q_Q1         N00788 N00769 N00800 BC238 
+V_V2         VCC 0 15Vdc
+
+**** RESUMING tasi.cir ****
+.END
+
+ERROR(ORPSIM-15113): Model BC238 used by Q_Q1 is undefined
+

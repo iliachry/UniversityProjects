@@ -1,0 +1,14 @@
+.ALIASES
+R_R1            R1(1=N02107 2=VCC ) CN @MAL.SCHEMATIC1(sch_1):INS2017@ANALOG.R.Normal(chips)
+C_Ce            Ce(1=0 2=N02139 ) CN @MAL.SCHEMATIC1(sch_1):INS2001@ANALOG.C.Normal(chips)
+R_RL            RL(1=0 2=N02159 ) CN @MAL.SCHEMATIC1(sch_1):INS2081@ANALOG.R.Normal(chips)
+V_V1            V1(+=N02099 -=0 ) CN @MAL.SCHEMATIC1(sch_1):INS1943@SOURCE.VSIN.Normal(chips)
+C_C1            C1(1=N02099 2=N02107 ) CN @MAL.SCHEMATIC1(sch_1):INS1969@ANALOG.C.Normal(chips)
+R_R2            R2(1=0 2=N02107 ) CN @MAL.SCHEMATIC1(sch_1):INS2033@ANALOG.R.Normal(chips)
+R_Re            Re(1=0 2=N02139 ) CN @MAL.SCHEMATIC1(sch_1):INS2065@ANALOG.R.Normal(chips)
+R_Rc            Rc(1=N02127 2=VCC ) CN @MAL.SCHEMATIC1(sch_1):INS2049@ANALOG.R.Normal(chips)
+V_V2            V2(+=VCC -=0 ) CN @MAL.SCHEMATIC1(sch_1):INS2243@SOURCE.VDC.Normal(chips)
+C_C2            C2(1=N02159 2=N02127 ) CN @MAL.SCHEMATIC1(sch_1):INS1985@ANALOG.C.Normal(chips)
+Q_Q1            Q1(C=N02127 B=N02107 E=N02139 ) CN @MAL.SCHEMATIC1(sch_1):INS2370@MYLIBRARY.BC238.Normal(chips)
+_    _(VCC=VCC)
+.ENDALIASES

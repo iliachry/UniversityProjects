@@ -1,0 +1,13 @@
+* source MAL
+R_R1         N02107 VCC  141 TC=0,0 
+C_Ce         0 N02139  100u  TC=0,0 
+R_RL         0 N02159  10k TC=0,0 
+V_V1         N02099 0  
++SIN 0 10m 1k 0 0 0
+C_C1         N02099 N02107  10u  TC=0,0 
+R_R2         0 N02107  33k TC=0,0 
+R_Re         0 N02139  1.5k TC=0,0 
+R_Rc         N02127 VCC  4.7k TC=0,0 
+V_V2         VCC 0 15Vdc
+C_C2         N02159 N02127  10u  TC=0,0 
+Q_Q1         N02127 N02107 N02139 BC238 

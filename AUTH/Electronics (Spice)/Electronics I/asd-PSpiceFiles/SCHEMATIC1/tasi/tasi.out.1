@@ -1,0 +1,54 @@
+
+**** 01/09/14 19:40:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-tasi"  [ C:\Users\Ilias\Desktop\spice\asd-PSpiceFiles\SCHEMATIC1\tasi.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tasi.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.002 0 
+.STEP LIN PARAM v -2 2 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ASD
+R_RD         N033891 VCC  2.2k TC=0,0 
+V_V1         VCC 0 15Vdc
+C_Cs         0 N03467  100u  TC=0,0 
+J_J1         N033891 N03437 N03467 J2N4393 
+V_Vin         N03429 0  
++SIN 0 {v} 1k 0 0 0
+R_RG         0 N03437  1meg TC=0,0 
+R_RS         0 N03467  220 TC=0,0 
+C_C1         N03429 N03437  10u  TC=0,0 
+C_C2         N03479 N03724  10u  TC=0,0 
+R_R1         0 N03724  4.7k TC=0,0 
+.PARAM  v=1
+
+**** RESUMING tasi.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N03479.
+
+ERROR(ORPSIM-15142): Node N03479 is floating
+

@@ -1,0 +1,12 @@
+* source ERG1
+V_V2         VCC 0 15Vdc
+R_R2         0 N02097  33k TC=0,0 
+C_C1         N02089 N02097  10u  TC=0,0 
+R_RL         0 N02149  10k TC=0,0 
+R_Rc         N02117 VCC  4.7k TC=0,0 
+C_Ce         0 N02129  100u  TC=0,0 
+R_Re         0 N02129  1.5k TC=0,0 
+R_R1         N02097 VCC  141k TC=0,0 
+C_C2         N02149 N02117  10u  TC=0,0 
+V_V3         N02089 0 DC 0Vdc AC 1Vac 
+Q_Q1         N02117 N02097 N02129 Q2N2222
