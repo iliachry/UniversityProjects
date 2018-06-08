@@ -1,0 +1,87 @@
+
+**** 05/27/15 10:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ten.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ten-pspicefiles/ten.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 500us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+ERROR(ORPSIM-15347): Cannot open input file C:\Users\Ilias\Desktop\telest\TEn-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.net.
+
+
+ABORTING SIMULATION
+**** 05/27/15 10:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           1
+  External (NCNODS)                 =           1
+  Total (NUMNOD)                    =           0
+
+Total device count (NUMEL)          =           0
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =           0
+  Initial no. elements (NTTAR)      =           0
+  No. elements w/ fillin (NTTBR)    =           0
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =       0.000
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               0
+  Readin                            =        0.00
+  General setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time                    =        0.00
+

@@ -1,0 +1,177 @@
+
+**** 06/06/15 16:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ten.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ten-pspicefiles/ten.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 500 1 100meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEN
+M_M3         N00249 N00249 N00372 N00372 nfet  
++ L=0.7u  
++ W=2.1u         
+M_M4         N00253 N00249 N00372 N00372 nfet  
++ L=0.7u  
++ W=2.1u         
+M_M6         N00257 N00253 N00372 N00372 nfet  
++ L=0.7u  
++ W=12.6u         
+M_M1         N00249 0 N00312 N00312 pfet  
++ L=0.7u  
++ W=4.2u         
+M_M2         N00253 N03863 N00312 N00312 pfet  
++ L=0.7u  
++ W=4.2u         
+M_M5         N00312 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=5u         
+M_M7         N00257 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=15.4u         
+M_M8         N00261 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=1.4u         
+I_IREF         N00261 N00372 DC 10uAdc  
+V_VDD         N00384 0 2.07Vdc
+V_VSS         0 N00372 -2.07Vdc
+C_Cc         N00253 N00257  0.738p  TC=0,0 
+C_CL         0 N00257  2.9p  TC=0,0 
+V_V1         N03863 0  AC 1
++SIN 0 1 10k 0 0 0
+
+**** RESUMING ten.cir ****
+.END
+
+**** 06/06/15 16:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    5               5            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA     .5              .5          
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA     .1              .1          
+        WETA     .25             .25         
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+         COX    1.628841E-03    1.628841E-03 
+          E0    0               0            
+
+
+**** 06/06/15 16:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00249)    2.0700 (N00253)    2.0700 (N00257)    2.0700 (N00261)     .3930     
+
+(N00312)    2.0700 (N00372)    2.0700 (N00384)    2.0700 (N03863)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.000E-05
+    V_VSS       -1.000E-05
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.07E-20  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/06/15 16:00:19 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .67
+

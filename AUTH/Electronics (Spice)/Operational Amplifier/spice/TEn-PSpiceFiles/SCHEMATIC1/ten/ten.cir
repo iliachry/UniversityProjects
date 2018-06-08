@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-ten"  [ C:\Users\Ilias\Desktop\telest\ten-pspicefiles\schematic1\ten.sim ] 
+
+** Creating circuit file "ten.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ten-pspicefiles/ten.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Ilias\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 500 1 100meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

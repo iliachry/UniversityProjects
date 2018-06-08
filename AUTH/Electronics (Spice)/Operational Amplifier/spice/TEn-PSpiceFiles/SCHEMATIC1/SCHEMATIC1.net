@@ -1,0 +1,32 @@
+* source TEN
+M_M3         N00249 N00249 N00372 N00372 nfet  
++ L=0.7u  
++ W=2.1u         
+M_M4         N00253 N00249 N00372 N00372 nfet  
++ L=0.7u  
++ W=2.1u         
+M_M6         N00257 N00253 N00372 N00372 nfet  
++ L=0.7u  
++ W=12.6u         
+M_M1         N00249 0 N00312 N00312 pfet  
++ L=0.7u  
++ W=4.2u         
+M_M2         N00253 N03863 N00312 N00312 pfet  
++ L=0.7u  
++ W=4.2u         
+M_M5         N00312 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=5u         
+M_M7         N00257 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=15.4u         
+M_M8         N00261 N00261 N00384 N00384 pfet  
++ L=0.7u  
++ W=1.4u         
+I_IREF         N00261 N00372 DC 10uAdc  
+V_VDD         N00384 0 2.07Vdc
+V_VSS         0 N00372 -2.07Vdc
+C_Cc         N00253 N00257  0.738p  TC=0,0 
+C_CL         0 N00257  2.9p  TC=0,0 
+V_V1         N03863 0  AC 1
++SIN 0 1 10k 0 0 0

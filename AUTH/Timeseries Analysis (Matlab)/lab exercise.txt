@@ -1,0 +1,161 @@
+GenARFitAR.m
+
+phiV = [0 1.6 -.89];
+thetaV = [];
+n=1000;
+sdnoise=10;
+xV = generateARMAts(phiV,thetaV,n,sdnoise);
+r=2;
+m = ar(xV,r,'ls');
+L = [20 100 500 1000];
+-m.a(2:end)
+c = 1;
+for i=L
+    m1 = ar(xV(1:i),r,'yw');
+    m2 = ar(xV(1:i),r,'ls');
+    coef1 = -m1.a(2:end);
+    coef2 = -m2.a(2:end);
+    phi1yw(c)= coef1(1);
+    phi2yw(c)= coef1(2);
+    phi1ls(c)= coef2(1);
+    phi2ls(c)= coef2(2);
+    c = c+1;
+end
+
+figure
+hold on
+plot(L,phi1yw, 'b');
+plot(L,phi1ls, 'r');
+plot(L,[phiV(2) phiV(2) phiV(2) phiV(2)], 'k');
+legend('Yule Walker','Least Squares','Constant');
+
+
+
+
+AicEstimation.m
+
+xV = generateARMAts([0 1.6 -0.9],[1.2 0.9],1000,10);
+plot(xV)
+A=nan(3,3);
+nrmseV=0;
+phiV=0;
+thetaV=0;
+SDz=0;
+fpeS=0;
+armamodel=0;
+
+for i=1:1:3;
+    for j=1:1:3;
+    [nrmseV,phiV,thetaV,SDz,A(i,j),fpeS,armamodel]=fitARMA(xV,i,j,1);
+    A(i,j) = aic(armamodel);
+    end
+end
+i=[1 2 3];
+
+A
+
+figure
+hold on
+plot(i,A(1,:), 'b');
+plot(i,A(2,:), 'r');
+plot(i,A(3,:), 'k');
+legend('p=1','p=2','p=3');
+
+
+
+prosarmogh  (mporei na xreiastei na allaksw ton kwdika tou kougioum se ena shmeio, na svhsw ena {1} kapou pou tha moy vgalei)
+
+
+xN=load('sunspots.dat');
+xN=xN(:,2);
+
+nrmseV=0;
+phiV=0;
+thetaV=0;
+SDz=0;
+fpeS=0;
+armamodel=0;
+
+
+[nrmseV,phiV,thetaV,SDz,A,fpeS,armamodel]=fitARMA(xN,2,0,1);
+pros = nan(1,length(xN));
+counter =1;
+pros(1)=xN(1);
+pros(2)=xN(2);
+for counter=3:1:length(xN)
+    pros(counter)=phiV(1)+phiV(2)*pros(counter-1)+phiV(3)*pros(counter-2)+SDz*randn;
+end
+hold on
+plot(xN);
+plot(pros);
+
+
+
+corrParcorr
+
+corr=[.8 .69 .54 .41 .27 .19 .18 .14 .09 .01];
+hold on
+plot(corr,'o-r');
+plot([1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30) 1.96/sqrt(30)]);
+plot([-1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30) -1.96/sqrt(30)]);
+parcorr=acf2pacf(corr,0);
+plot(parcorr,'*-m');
+
+
+predict1step
+
+xV = generateARMAts([0 .5 -.3],[],1000,10);
+[nrmseV,phiV,thetaV,SDz,a,fpeS,armamodel]=fitARMA(xV,2,0,1);
+yV(699)=xV(699);
+yV(700)=xV(700);
+for i=701:1:1000
+    yV(i)=phiV(2)*xV(i-1)+phiV(3)*xV(i-2);
+end
+hold on
+plot(xV(700:1000));
+plot(yV(700:1000));
+
+%kanonikopoihmeno meso tetragwniko sfalma (normalised root mean square error, nrmse)
+
+xmean=0;
+for i=701:1:1000   
+    xmean=xmean+xV(i);
+end
+
+xmean = xmean/300;
+
+a=0;
+for i=701:1:1000
+    a=a+(xV(i)-yV(i))^2;
+end
+
+a=a/300;
+
+b=0;
+for i=701:1:1000
+    b=b+(xV(i)-xmean)^2;
+end
+
+b=b/300;
+
+nrmse=sqrt(a)/sqrt(b)
+
+
+predict 2 steps (allazei mono to xV(i-1) se yV(i-1))
+
+predict 10 steps
+
+xV = generateARMAts([0 .5 -.3],[],1000,10);
+[nrmseV,phiV,thetaV,SDz,a,fpeS,armamodel]=fitARMA(xV,2,0,1);
+yV(699)=xV(699);
+yV(700)=xV(700);
+for i=701:1:710
+    yV(i)=phiV(2)*yV(i-1)+phiV(3)*yV(i-2);
+end
+hold on
+plot(xV(700:720));
+plot(yV(700:710));
+
+%h synarthsh fthinei giati den yparxei h tyxaia metavlhth. vlepoyme pws
+%otan h xV kathorizetai kai apo tyxaia metavlhth, auto periorizei thn
+%dynatothta mas na doume se polla vhmata brosta sto mellon

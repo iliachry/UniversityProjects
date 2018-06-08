@@ -1,0 +1,36 @@
+directory: non linear
+
+xV = load('henon.dat');
+autocorr(xV)
+[fnnM,mdistV,sddistV] = falsenearest(xV(1:1000),1,10,10,10,'a');
+plot(xV(1:49999),xV(2:50000),'.')
+
+xV = load('logistic.dat');
+autocorr(xV)
+[fnnM,mdistV,sddistV] = falsenearest(xV(1:1000),1,10,10,10,'a');
+
+xV = load('xlorenz.dat');
+plot(xV(1:500))
+epilogh lag apo to 1/e gia diaforikes eksiswseis =>ô=4
+autocorr(xV)
+[mutM] = mutualinformation(xV, 5,'','',''); dinei 2
+
+[fnnM,mdistV,sddistV] = falsenearest(xV(1:1000),4,10,10,10,'a')
+plot(xV(1:9992),xV(5:9996),xV(9:10000),'.')
+
+ 
+figure
+[fnnM,mdistV,sddistV] = falsenearest(xV(1:1000),2,10,10,10,'a');
+plot3(xV(1:9996),xV(3:9998),xV(5:10000),'.')
+
+
+
+xV = load('epileeg.dat');
+autocorr(xV)   mexri 4
+
+[mutM] = mutualinformation(xV, 20,'','','')
+morfh diakritou, ô=1
+
+den einai kalo diagramma
+plot3(xV(1:3392),xV(5:3396),xV(9:3400),'.')
+

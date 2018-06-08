@@ -1,0 +1,45 @@
+load('ase.dat');
+y=ase(:,7);
+x = diff(log(y));
+plot(x)
+
+A=nan(4,4);
+B=nan(4,4);
+nrmseV=1;
+phiV=0;
+thetaV=0;
+SDz=0;
+fpeS=0;
+armamodel=0;
+
+for i=1:1:4;
+    for j=1:1:4;
+    [nrmseV,phiV,thetaV,SDz,A(i,j),fpeS,armamodel]=fitARMA(x,i,j,0);
+    A(i,j) = aic(armamodel);
+    B(i,j) = nrmseV;
+    end
+end
+i=[1 2 3 4];
+
+A
+B
+
+figure
+hold on
+plot(i,A(1,:), 'b');
+plot(i,A(2,:), 'r');
+plot(i,A(3,:), 'k');
+plot(i,A(4,:), 'm');
+legend('p=1','p=2','p=3','p=4');
+
+figure
+hold on
+plot(i,B(1,:), 'b');
+plot(i,B(2,:), 'r');
+plot(i,B(3,:), 'k');
+plot(i,B(4,:), 'm');
+legend('p=1','p=2','p=3','p=4');
+
+
+
++topouethsh sthn rexamplearma me katallhles montes
