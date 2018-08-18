@@ -5,5 +5,5 @@ This repository contains projects I developed for courses I attended while study
 
 | Semester | Course                           | Language      |
 | :------: | -------------------------------- | ------------- |
-| 1st      | Probability		      | Matlab        |
+| 1st      | Probability & Stochastic Processes		      | Matlab        |
 | 2nd      | Machine Learning for Computer Vision     | Matlab          |
