@@ -1,0 +1,2 @@
+SELECT City
+FROM HospitalLocation
