@@ -1,6 +1,6 @@
 # Aristotle University of Thessaloniki
 
-This repository contains projects I developed for courses I attended while studying Electrical and Computer Engineering (Master) at the Aristotle University of Thessaloniki.
+This repository contains projects I developed for courses I attended while studying Electrical and Computer Engineering (Diploma,MEng Equivalent) at the Aristotle University of Thessaloniki.
 
 
 | Semester | Course                           | Language      |
