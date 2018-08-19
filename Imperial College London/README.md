@@ -1,6 +1,6 @@
 # Imperial College London 
 
-This repository contains projects I developed for courses I attended while studying Communications & Signal Processing (MSc) at Imperial College London.
+This repository contains projects I developed for courses I attended while studying Communications & Signal Processing (MSc) at Imperial College London. It also contais teaching material such as lecture notes and problems sets of courses that a project was not required or I decided not to sit.  
 
 
 | Semester | Course                           | Language      |
